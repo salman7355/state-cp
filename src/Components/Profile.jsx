@@ -1,4 +1,3 @@
-import { click } from "@testing-library/user-event/dist/click";
 import React, { useState } from "react";
 import Result from "./Results";
 
@@ -20,8 +19,12 @@ const Profile = () => {
 
   return (
     <>
-      <h1>My Profile</h1>
-      <button onClick={clickHandler}>{name}</button>
+      <div className="ms-3 d-flex mt-2">
+        <h1>My Profile</h1>
+        <button className="btn btn-info ms-4 p-2" onClick={clickHandler}>
+          {name}
+        </button>
+      </div>
       {bool ? <Result /> : null}
     </>
   );
